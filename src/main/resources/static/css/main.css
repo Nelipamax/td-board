@@ -1,0 +1,135 @@
+body {
+    background-color: #aad9e8;
+}
+
+a {
+    text-decoration: none;
+    color: navy;
+    margin: 5px;
+    font-size: 20px;
+}
+
+a:hover {
+    color: aliceblue;
+}
+
+.title {
+    color: darkblue;
+    font-family: cursive;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+    opacity: 0;
+    -webkit-transition: opacity 200ms ease-in;
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in;
+    pointer-events: none;
+    margin: 0;
+    padding: 0;
+}
+
+.modal:target {
+    opacity: 1;
+    pointer-events: auto;
+    overflow-y: auto;
+}
+
+.modal_dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+}
+
+@media (min-width: 576px) {
+    .modal_dialog {
+        max-width: 500px;
+        margin: 30px auto;
+    }
+}
+
+.modal_content {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: .3rem;
+    outline: 0;
+    color: navy;
+}
+@media (min-width: 768px) {
+    .modal_content {
+        -webkit-box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    }
+}
+.modal_header {
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #eceeef;
+}
+.modal_title {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 1.25rem;
+    font-width: 500;
+}
+.body{
+    position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 15px;
+    overflow: auto;
+}
+.show_tasks {
+    align-items: center;
+    margin-left:15em;
+    height: 500px;
+    width: 1250px;
+}
+
+.button {
+    background: darkblue;
+    color: aliceblue;
+    border-radius: 10px;
+    font-size: 15px;
+    border: none;
+    padding: 1rem 1.5rem;
+    position: relative;
+    top: 500px;
+}
+
+.button:hover {
+    background-color: aliceblue;
+    color: darkblue;
+ }
