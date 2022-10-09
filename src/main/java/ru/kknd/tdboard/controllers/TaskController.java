@@ -27,27 +27,8 @@ public class TaskController {
         return "daily";
     }
 
-    @PostMapping("/daily")
-    public String setNewTask(@RequestParam String description,
-                             @RequestParam String deadline) {
-        service.insertTask(description, LocalDate.parse(deadline));
-        return "daily";
-    }
-    @PutMapping("/daily")
-    public String doneTask(@RequestParam int id) {
-        service.doneTaskById(id);
-        return "daily";
-    }
-
     @GetMapping("/week")
     public String getWeekPage(Model model) {
-        return "week";
-    }
-
-    @PostMapping("/week")
-    public String setNewTaskW(@RequestParam String description,
-                             @RequestParam String deadline) {
-        service.insertTask(description, LocalDate.parse(deadline));
         return "week";
     }
 
@@ -56,22 +37,21 @@ public class TaskController {
         return "month";
     }
 
-    @PostMapping("/month")
-    public String setNewTaskM(@RequestParam String description,
-                             @RequestParam String deadline) {
-        service.insertTask(description, LocalDate.parse(deadline));
-        return "month";
-    }
-
     @GetMapping("/year")
     public String getYearPage(Model model) {
         return "year";
     }
 
-    @PostMapping("/year")
-    public String setNewTaskY(@RequestParam String description,
+    @PostMapping("/add-task")
+    public String addNewTask(@RequestParam String description,
                              @RequestParam String deadline) {
         service.insertTask(description, LocalDate.parse(deadline));
-        return "year";
+        return "redirect:/daily";
+    }
+
+    @PostMapping("/done-task")
+    public String doneTask(@RequestParam int id) {
+        service.doneTaskById(id);
+        return "redirect:/daily";
     }
 }
