@@ -122,14 +122,37 @@ a:hover {
     background: darkblue;
     color: aliceblue;
     border-radius: 10px;
-    font-size: 15px;
+    font-size: 20px;
     border: none;
-    padding: 1rem 1.5rem;
-    position: relative;
-    top: 500px;
+    padding: 10px;
+    position: fixed;
+    top: 650px;
 }
 
 .button:hover {
     background-color: aliceblue;
     color: darkblue;
  }
+
+.ttt {
+    padding: 5px;
+    margin: 15px;
+    border-bottom: 3px solid darkblue;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.main-header {
+    margin-left: 200px;
+}
+
+.done-button {
+    position: relative;
+    bottom: 50px;
+    left: 1000px;
+    width: 100px;
+    color: darkblue;
+    background: aliceblue;
+    border: 2px solid darkblue;
+    border-radius: 10px;
+}

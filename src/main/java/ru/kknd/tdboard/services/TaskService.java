@@ -15,12 +15,8 @@ public class TaskService {
         this.dao = dao;
     }
 
-    public TaskModel getTask() {
-        return dao.getTask();
-    }
-
-    public List<TaskModel> getTasksOnDay () {
-        return dao.getTasksOnDay();
+    public List<TaskModel> getAllTasks () {
+        return dao.getAllTasks();
     }
 
     public void insertTask (String descr, LocalDate dl) {

@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" th:href="@{/css/main.css}"/>
-    <title>Задачи на день</title>
+    <title>Мои задачи</title>
 </head>
 <body>
-<div class="main">
-    </div>
+<h1 class="main-header" >Текущие задачи: </h1>
     <a class="button" href="#open_modal">Добавить задачу</a>
     <div class="modal" id="open_modal">
         <div class="modal_dialog">
@@ -20,20 +19,19 @@
                         <input class="task-text" type="text" name="description" placeholder="Введите задачу">
                         <p>Выберите дату</p>
                         <input type="date" name="deadline">
-                        <input class="submit_task" type="submit" name="Добавить">
+                        <input class="submit_task" type="submit" name="Добавить" value="Добавить задачу">
                     </form>
                 </div>
             </div>
         </div>
     </div>
     <div class="show_tasks">
-        <li th:each="task : ${tasks}">
+        <li class="ttt" th:each="task : ${tasks}">
             <td th:text="${task.description}"/>
-            <td>
+            <br><p style="font-size: 20px; font-weight: normal"> Выполнить до: <span th:text="${task.deadline}"></span></p>
                 <form method="post" action="/done-task">
-                    <button name="id" th:value="${task.id}">Готово</button>
+                    <button class="done-button" name="id" th:value="${task.id}">Готово</button>
                 </form>
-            </td>
         </li>
     </div>
 </div>
