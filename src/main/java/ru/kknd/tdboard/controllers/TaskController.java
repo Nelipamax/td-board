@@ -27,21 +27,6 @@ public class TaskController {
         return "daily";
     }
 
-    @GetMapping("/week")
-    public String getWeekPage(Model model) {
-        return "week";
-    }
-
-    @GetMapping("/month")
-    public String getMonthPage(Model model) {
-        return "month";
-    }
-
-    @GetMapping("/year")
-    public String getYearPage(Model model) {
-        return "year";
-    }
-
     @PostMapping("/add-task")
     public String addNewTask(@RequestParam String description,
                              @RequestParam String deadline) {
